@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="nums-to-sounds.js"></script>
     </head>
@@ -24,7 +25,7 @@
 
     var isPlaying = false;
     var intervalID;
-    
+
     $(document).ready(function() {
         $("#mbtn").click(function(){
             if(!isPlaying) {
