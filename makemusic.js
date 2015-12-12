@@ -49,6 +49,10 @@ $(function(){
       scale: scaleCode,
       key: keyCode
     };
-    console.log(dataToSend);
+    var noteList = dataToSend.zscores.map(function(zScore){
+    return zMod(zScore)
+});
+    var scales = generateScales(dataToSend.key, dataToSend.scale)
+    console.log(transformToNotes(noteList, scales));
   });
 });
