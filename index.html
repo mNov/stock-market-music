@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Stock Market Music</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  #container {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    background: #22f;
+  }
+  #container > div {
+    margin: 0 auto;
+  }
+  .music-option {
+    margin: 32px auto;
+    padding: 0 auto;
+  }
+  #make-music {
+    width: 300px;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="inner-container-title">
+      <h1>Stock Market Music</h1><br/>
+      <img src="http://lorempixel.com/image_output/abstract-q-c-80-80-4.jpg">
+    </div>
+    <div id="inner-container-options">
+      <form name="music-options">
+       <div class="music-option" id="option-key">
+       Spreadsheets:
+          <select name="key" id="key">
+            <option value="1">GOOG</option>
+            <option value="2">AMZN</option>
+            <option value="3">YHOO</option>
+         </select>
+        </div>
+        <div class="music-option" id="option-key">
+          Key: 
+          <select name="key" id="key-select">
+            <option value="c">C</option>
+            <option value="cd">C#/Db</option>
+            <option value="d">D</option>
+            <option value="de">D#/Eb</option>
+            <option value="e">E</option>
+            <option value="f">F</option>
+            <option value="fg">F#/Gb</option>
+            <option value="g">G</option>
+            <option value="ga">G#/Ab</option>
+            <option value="a">A</option>
+            <option value="ab">A#/Bb</option>
+            <option value="b">B</option>
+          </select>
+        </div>
+        <div class="music-option" id="option-scale">
+          Scale:
+            <button type="button" class="btn btn-default scale-btn" aria-label="left-align" id="scale-type-1">Major</button>
+            <button type="button" class="btn btn-default scale-btn" aria-label="left-align" id="scale-type-2">Minor (Harmonic)</button>
+            <button type="button" class="btn btn-default scale-btn" aria-label="left-align" id="scale-type-3">Minor (Melodic)</button>
+            <br />
+            <button type="button" class="btn btn-default scale-btn" aria-label="left-align" id="scale-type-4">Chromatic</button>
+            <button type="button" class="btn btn-default scale-btn" aria-label="left-align" id="scale-type-5">Pentatonic</button>
+        </div>
+      </form>
+        <button type="submit" class="btn btn-primary" id="make-music" disabled>Listen</button>
+        <button id="test" class="btn btn-warning">Test</button>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="/spreadsheet-functions.js"></script>
+  <script src="/makemusic.js"></script>
+  <!-- ADD MUSIC MAKE SCRIPT -->
+</body>
+
+
+</html>
