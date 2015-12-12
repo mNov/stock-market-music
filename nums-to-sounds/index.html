@@ -21,5 +21,22 @@
                 698.456, 659.255, 659.255, 659.255,
                 659.255, 587.330, 587.330, 659.255,
                 587.330, 0, 783.991, 0];
+
+    var isPlaying = false;
+    var intervalID;
+    
+    $(document).ready(function() {
+        $("#mbtn").click(function(){
+            if(!isPlaying) {
+                isPlaying = true;
+                $(this).text("Pause!");
+                intervalID = setInterval(playNotes, 500);
+            }else {
+                isPlaying = false;
+                $(this).text("Play!");
+                clearInterval(intervalID);
+            }
+        });
+    });
     </script>
 </html>
