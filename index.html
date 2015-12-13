@@ -5,17 +5,34 @@
   <title>Stock Market Music</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
 <style>
+  body {
+    background: #caf;
+  }
   * {
     box-sizing: border-box;
+  }
+  .center-me {
+    display: block;
+    margin: 0 auto;
+  }
+  .center-me-inline {
+    text-align: center;
   }
   #container {
     max-width: 500px;
     display: block;
-    margin: 0 auto;
-    background: #22f;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px 0;
+    border: solid 3px #999;
+    border-radius: center;
   }
   #container > div {
     margin: 0 auto;
+  }
+  #logo {
+    width: 80px;
+    height: auto;
   }
   .music-option {
     margin: 32px auto;
@@ -29,10 +46,10 @@
 </head>
 
 <body>
-  <div id="container">
+  <div id="container" class="center-me-inline">
     <div id="inner-container-title">
       <h1>Stock Market Music</h1><br/>
-      <img src="http://lorempixel.com/image_output/abstract-q-c-80-80-4.jpg">
+      <img src="logo-file.png" id="logo">
     </div>
     <div id="inner-container-options">
       <form name="music-options">
@@ -72,7 +89,7 @@
         </div>
       </form>
         <button type="submit" class="btn btn-primary" id="make-music" disabled>Listen</button>
-        <button id="test" class="btn btn-warning">Test</button>
+        <!--button id="test" class="btn btn-warning">Test</button-->
     </div>
   </div>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>

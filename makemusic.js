@@ -220,10 +220,11 @@ $(function(){
   
   $('#make-music').on('click', function() {
     //console.log(spreadsheet)
-    var spreadsheet = spreadsheets[($('#key').val()-1)];
+    var spreadsheet = (spreadsheets[($('#key').val()-1)])
+    console.log(spreadsheet)
     var keyCode = $('#key-select').val();
     dataToSend = {
-      zscores: spreadsheet.getZScore(0),
+      zscores: spreadsheet.getZScore(0).reverse(),
       scale: scaleCode,
       key: keyCode
     };
