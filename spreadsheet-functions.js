@@ -24,8 +24,7 @@ DataSet.prototype.getVariance = function(column) {
     var mean = this.getAverage(column);
     return targetColumn
         .map(function(num){ return Math.pow((num - mean), 2)})
-        .reduce(function(a,b) { return a+b },0) 
-        / targetColumn.length;
+        .reduce(function(a,b) { return a+b },0) / targetColumn.length;
 };
 
 DataSet.prototype.getStandardDeviation = function(column){
