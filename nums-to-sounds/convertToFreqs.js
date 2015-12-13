@@ -93,8 +93,4 @@ function transformToNotes(notes, scales){
 
 
 
-// var noteList = dataToSend.zscores.map(function(zScore){
-//     return zMod(zScore)
-// })
-
 // console.log(noteList)

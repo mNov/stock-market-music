@@ -1,3 +1,6 @@
+var isPlaying = false;
+var intervalID;
+
 var option1 = new DataSet(
         "HistoricalQuotes.csv",
         ["2015/12/11", "2015/12/10", "2015/12/09", "2015/12/08","2015/12/07"],
@@ -28,19 +31,19 @@ $(function(){
     scaleCode = parseInt($this.attr('id').slice(-1));
   });
   
-  $('#make-music').on('click', function(){
-    var spreadsheet = spreadsheets[($('#key').val()-1)];
-    var keyCode = $('#key-select').val();
-    var dataToSend = {
-      zscores: spreadsheet.getZScore(0),
-      scale: scaleCode,
-      key: keyCode
-    }
-        console.log(dataToSend);
+  // $('#make-music').on('click', function(){
+  //   var spreadsheet = spreadsheets[($('#key').val()-1)];
+  //   var keyCode = $('#key-select').val();
+  //   var dataToSend = {
+  //     zscores: spreadsheet.getZScore(0),
+  //     scale: scaleCode,
+  //     key: keyCode
+  //   }
+  //       console.log(dataToSend);
 
-  })
+  // })
   
-  $('#test').on('click', function() {
+  $('#make-music').on('click', function() {
     
     var spreadsheet = spreadsheets[($('#key').val()-1)];
     var keyCode = $('#key-select').val();
@@ -53,6 +56,17 @@ $(function(){
     return zMod(zScore)
 });
     var scales = generateScales(dataToSend.key, dataToSend.scale)
-    console.log(transformToNotes(noteList, scales));
+    deezNotes = transformToNotes(noteList, scales)
+      if(!isPlaying) {
+          isPlaying = true;
+          $(this).text("Pause!");
+          intervalID = setInterval(playNotes, 200);
+      }else {
+          isPlaying = false;
+          $(this).text("Play!");
+          clearInterval(intervalID);
+      }
+
   });
+
 });
