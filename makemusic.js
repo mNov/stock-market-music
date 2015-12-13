@@ -52,8 +52,18 @@ var option1 = new DataSet(
             [736.75,    743.83,     737.001,    754.2,      755.09,     750]
         ]
     );
-var option2 = null;
-var option3 = null;
+var option2 = new DataSet(
+                    "Amazon",
+                    [],
+                    [],
+                    [[/*items in inner arroy*/]]//closing scores
+)
+var option3 = new DataSet(
+                    "Yahoo",
+                    [],
+                    [],
+                    [[/*items in inner arroy*/]]//closing scores
+)
 var spreadsheets = [option1, option2, option3];
 var dataToSend;
 
