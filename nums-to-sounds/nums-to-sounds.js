@@ -32,9 +32,12 @@ function createOscillator(freq) {
     gain.gain.linearRampToValueAtTime(0, audio.currentTime + decay / 1000);
 
     osc.frequency.value = freq;
-    osc.type = "square";
+    osc.type = "sine";
     osc.connect(gain);
+    
     osc.start(0);
+    //osc2.start(0);
+    
 
     setTimeout(function() {
         osc.stop(0);
