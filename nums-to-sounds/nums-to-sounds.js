@@ -8,7 +8,7 @@ function playNotes() {
     var freq = deezNotes[position];
     position += 1;
     if(position >= deezNotes.length) {
-        position = 0;
+       // position = 0;
     }
     if(freq) {
         createOscillator(freq);

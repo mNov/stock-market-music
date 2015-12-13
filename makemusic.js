@@ -239,6 +239,7 @@ $(function(){
           intervalID = setInterval(playNotes, 200);
       }else {
           isPlaying = false;
+          position = 0;
           $(this).text("Play!");
           clearInterval(intervalID);
       }
