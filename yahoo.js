@@ -2034,6 +2034,6 @@ var yahoo = [
 ]
 
 var yahooClose=yahoo.map(function(date){
-  return parseInt(date["FIELD2"],10)
+  return parseFloat(date["FIELD2"],10)
 })
 yahooClose = yahooClose.slice(1);

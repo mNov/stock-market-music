@@ -2034,7 +2034,7 @@ var amazon = [
 ]
 
 var amazonClose = amazon.map(function(date){
-  return parseInt(date["FIELD2"],10)
+  return parseFloat(date["FIELD2"],10)
 })
 
 amazonClose = amazonClose.slice(1);
